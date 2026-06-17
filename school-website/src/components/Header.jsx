@@ -12,10 +12,11 @@ function Header() {
         </div>
 
         <div className="top-buttons">
-          <button>Admission Enquiry Form</button>
-          <button>Online Admissions</button>
-          <a href="/">Contact</a>
+          <a href="/">Contact Us</a>
           <button className="login-btn">Login</button>
+          <button className="login-btn">Register</button>
+
+
         </div>
       </div>
 
@@ -26,7 +27,6 @@ function Header() {
           <li>ABOUT US</li>
           <li>STUDENT LIFE</li>
           <li>FACILITIES</li>
-          <li>UNIFORMS</li>
           <li>GALLERY</li>
           <li>ACHIEVEMENTS</li>
           <li>CAREERS</li>

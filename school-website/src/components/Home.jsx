@@ -5,38 +5,26 @@ function Home() {
   return (
     <>
       <section className="hero-image-section">
-        <img
-          src={Homelogo}
-          alt="School"
-          className="hero-image"
-        />
+        <img src={Homelogo} alt="School" className="hero-image" />
       </section>
 
       <section className="hero-content">
-        <span className="hero-badge">
-          Admissions Open 2026-27
-        </span>
+        <span className="hero-badge">Admissions Open 2026-27</span>
 
-        <h1>
-          Welcome To TAPOBHUMI EDU HUB
-        </h1>
+        <h1>Welcome To TAPOBHUMI EDU HUB</h1>
 
         <p>
-          Tapo Bhumi Edu Hub is committed to providing
-          quality education that inspires students to
-          achieve academic excellence, develop strong
-          values, and become responsible global citizens.
-          We create a nurturing environment where every
-          child can learn, grow, and succeed.
+          Tapo Bhumi Edu Hub is committed to providing quality education that
+          inspires students to achieve academic excellence, develop strong
+          values, and become responsible global citizens. We create a nurturing
+          environment where every child can learn, grow, and succeed.
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">
-            Admission Now
-          </button>
+          <button className="primary-btn">Admission Open</button>
 
           <button className="secondary-btn">
-            Learn More
+            <a href="https://share.google/nNIxwMwLDkuKEFG3b">Learn More</a>
           </button>
         </div>
 
@@ -56,7 +44,6 @@ function Home() {
             <span>Years Excellence</span>
           </div>
         </div>
-
       </section>
     </>
   );
