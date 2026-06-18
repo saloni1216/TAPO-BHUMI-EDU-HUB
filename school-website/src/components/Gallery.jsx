@@ -32,7 +32,7 @@ function Gallery() {
 
       {/* Hero Section */}
       <div className="gallery-hero"  style={{ backgroundImage: `url(${gallery8})` }}>
-        <h1>College Gallery</h1>
+        <h1>School Gallery</h1>
         <p>
           Explore memorable moments, academic achievements, cultural events,
           campus life, modern facilities, and student activities through our
@@ -42,9 +42,9 @@ function Gallery() {
 
       {/* About Gallery */}
       <div className="gallery-intro">
-        <h2>Life at Our College</h2>
+        <h2>Life at Our School</h2>
         <p>
-          Our college provides a vibrant environment where students grow
+          Our school provides a vibrant environment where students grow
           academically, socially, and professionally. The gallery showcases
           campus infrastructure, classrooms, laboratories, library facilities,
           seminars, workshops, sports events, annual functions, and various
@@ -58,7 +58,7 @@ function Gallery() {
           <div className="gallery-card" key={index}>
             <img
               src={image}
-              alt={`College Gallery ${index + 1}`}
+              alt={`School Gallery ${index + 1}`}
             />
           </div>
         ))}
