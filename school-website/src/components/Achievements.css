@@ -1,0 +1,147 @@
+.achievement-page {
+  background: #f8fafc;
+}
+
+/* HERO */
+
+.achievement-hero {
+  height: 420px;
+
+  background: linear-gradient(
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.55)
+    ),
+    url("../assets/campus1.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.achievement-overlay {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.achievement-overlay h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.achievement-overlay p {
+  font-size: 20px;
+  max-width: 800px;
+}
+
+/* INTRO */
+
+.achievement-intro {
+  max-width: 1000px;
+  margin: 70px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.achievement-intro h2 {
+  color: #003366;
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.achievement-intro p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/* GRID */
+
+.achievement-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 25px;
+}
+
+.achievement-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 15px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 25px rgba(0,0,0,.08);
+
+  transition: .3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+}
+
+.achievement-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+  color: #003366;
+  margin-bottom: 12px;
+}
+
+.achievement-card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* STATS */
+
+.achievement-stats {
+  margin-top: 80px;
+
+  background: #003366;
+
+  color: white;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+  padding: 60px 20px;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 18px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .achievement-overlay h1{
+    font-size:38px;
+  }
+
+  .achievement-overlay p{
+    font-size:16px;
+  }
+
+  .achievement-stats{
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+  }
+}

@@ -211,3 +211,107 @@ body,
     display: none;
   }
 }
+/* CAREERS DROPDOWN */
+
+.career-dropdown-menu {
+  position: relative;
+}
+
+.career-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 220px;
+
+  background: white;
+  border-radius: 8px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+
+  list-style: none;
+  padding: 6px;
+  margin: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.2s ease;
+
+  z-index: 1000;
+}
+
+.career-dropdown-menu:hover .career-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.career-dropdown li {
+  padding: 10px 12px;
+  border-radius: 6px;
+
+  font-size: 14px;
+  color: #444;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.career-dropdown li:hover {
+  background: #f5f5f5;
+  color: #d90c43;
+}
+
+
+/* Dropdown container */
+.course-dropdown-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Dropdown menu (Default: Hidden) */
+ul.course {
+  display: none !important; /* !important lagane se layout rules override nahi honge */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff !important;
+  min-width: 180px;
+  margin: 0;
+  padding: 0;
+  list-style: none !important; /* Koi bhi bullet points ya numeric marks hatane ke liye */
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+
+/* IMPORTANT: Hover karne par hi display block hoga */
+.course-dropdown-menu:hover ul.course {
+  display: block !important;
+}
+
+/* Dropdown ke andar ke items (Science, Commerce, Arts) */
+ul.course li {
+  display: block !important; /* Isse items ek line me aane ki jagah ek ke neeche ek aayenge */
+  width: 100%;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  background: #ffffff !important;
+  color: #333 !important; /* Text color ko normal rakhne ke liye */
+  font-size: 14px;
+  text-align: left; /* Text left side me aligned rahega */
+  box-sizing: border-box;
+}
+
+/* Last item ki bottom border hatane ke liye */
+ul.course li:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect individual items ke liye */
+ul.course li:hover {
+  background: #f1f1f1 !important;
+  color: #d1345b !important; /* Hover par aapke header ka maroon/red color text par dikhega */
+}

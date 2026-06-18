@@ -31,7 +31,25 @@ function Header() {
           <li onClick={() => navigate("/facilities")}>FACILITIES</li>
           <li onClick={() => navigate("/gallery")}>GALLERY</li>
           <li onClick={() => navigate("/achievements")}>ACHIEVEMENTS</li>
-          <li onClick={() => navigate("/careers")}>CAREERS</li>
+
+          <li className="course-dropdown-menu">
+            COURSES OFFERED ▼
+            <ul className="course">
+              <li onClick={() => navigate("/courses?type=science")}>Science</li>
+              <li onClick={() => navigate("/courses?type=commerce")}>
+                Commerce
+              </li>
+              <li onClick={() => navigate("/courses?type=arts")}>Arts</li>
+            </ul>
+          </li>
+
+
+          <li className="career-dropdown-menu">
+            CAREERS ▼
+            <ul className="career-dropdown">
+              <li onClick={() => navigate("/careers")}>Teachers Recruitment</li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </>

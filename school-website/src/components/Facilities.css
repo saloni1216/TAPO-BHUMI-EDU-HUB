@@ -1,0 +1,116 @@
+/* --- Base Page Setup --- */
+.facilities-page-container {
+  background-color: #f7f9fb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Hero Image Banner --- */
+.facilities-hero-banner-video {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.facilities-hero-banner-video img {
+  width: 100%;
+  height: auto;      /* Image ka original ratio maintain rahega */
+  display: block;
+}
+
+/* --- Blue Ribbon Text Style --- */
+.facilities-intro-box {
+  background-color: #e6f0fa;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #e0e8f0;
+}
+
+.facilities-intro-text {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #0c437a;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Layout Content Grid --- */
+.facilities-content-section {
+  max-width: 1140px;
+  margin: -25px auto 50px auto;
+  padding: 0 20px;
+}
+
+.facilities-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* --- Facility Cards --- */
+.single-facility-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 25px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 4px solid #d1345b;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.single-facility-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.facility-icon-wrapper {
+  background-color: #f0f4f8;
+  font-size: 26px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  height: 52px;
+}
+
+.facility-card-title {
+  font-size: 15px;
+  color: #111;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.facility-card-desc {
+  font-size: 13.5px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- Mobile Responsive Layout --- */
+@media (max-width: 768px) {
+  .facilities-intro-text {
+    font-size: 14px;
+  }
+
+  .facilities-content-section {
+    margin-top: 15px;
+  }
+
+  .facilities-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
