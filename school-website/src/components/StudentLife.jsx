@@ -68,7 +68,7 @@ function StudentLife() {
     <div className="magazine-container">
       
       <header className="magazine-header">
-        <div className="magazine-header-meta">Student Life & Service</div>
+        <div className="magazine-header-meta">Student Life </div>
         <h1 className="magazine-main-title">Student Life and Service</h1>
       </header>
 
