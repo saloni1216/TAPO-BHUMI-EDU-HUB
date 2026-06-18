@@ -1,7 +1,27 @@
 import "./Home.css";
 import Homelogo from "../assets/Home-logo.jpeg";
 
+
 function Home() {
+
+    const handleLearnMore = () => {
+    window.open(
+      "https://share.google/nNIxwMwLDkuKEFG3b",
+      "_blank"
+    );
+  };
+
+
+  const handleAdmission = () => {
+    window.open(
+      "https://zfrmz.in/g6dvG9SbFiXdoxQDmChB",
+      "_blank"
+    );
+  };
+
+
+
+
   return (
     <>
       <section className="hero-image-section">
@@ -21,10 +41,11 @@ function Home() {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">Admission Open</button>
-
-          <button className="secondary-btn">
-            <a href="https://share.google/nNIxwMwLDkuKEFG3b">Learn More</a>
+          <button className="primary-btn" onClick={handleAdmission}>
+            Admission Open
+          </button>
+          <button className="secondary-btn" onClick={handleLearnMore}>
+            Learn More
           </button>
         </div>
 

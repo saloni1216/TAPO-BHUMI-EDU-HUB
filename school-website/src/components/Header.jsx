@@ -1,35 +1,37 @@
 import "./Header.css";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <>
-      {/* Top Header */}
       <div className="top-header">
         <div className="logo">
-           <img src={logo} alt="School Logo" />
+          <img src={logo} alt="School Logo" />
           <h2>Tapobhumi Edu. Hub</h2>
         </div>
 
         <div className="top-buttons">
-          <a href="/">Contact Us</a>
+          <button onClick={() => navigate("/contact")} className="login-btn">
+            Contact Us
+          </button>
+
           <button className="login-btn">Login</button>
           <button className="login-btn">Register</button>
-
-
         </div>
       </div>
 
-      {/* Navigation Bar */}
       <nav className="navbar">
         <ul>
-          <li>HOME</li>
-          <li>ABOUT US</li>
-          <li>STUDENT LIFE</li>
-          <li>FACILITIES</li>
-          <li>GALLERY</li>
-          <li>ACHIEVEMENTS</li>
-          <li>CAREERS</li>
+          <li onClick={() => navigate("/")}>HOME</li>
+          <li onClick={() => navigate("/about")}>ABOUT US</li>
+          <li onClick={() => navigate("/studentlife")}>STUDENT LIFE</li>
+          <li onClick={() => navigate("/facilities")}>FACILITIES</li>
+          <li onClick={() => navigate("/gallery")}>GALLERY</li>
+          <li onClick={() => navigate("/achievements")}>ACHIEVEMENTS</li>
+          <li onClick={() => navigate("/careers")}>CAREERS</li>
         </ul>
       </nav>
     </>

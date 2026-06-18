@@ -64,6 +64,8 @@
 
 .secondary-btn {
   background: white;
+  text-decoration: none;
+  color: inherit;
   border: 2px solid #d6004c;
   color: #d6004c;
 }
