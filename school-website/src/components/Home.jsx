@@ -7,7 +7,7 @@ function Home() {
 
   const handleAdmission = () => {
     window.open(
-      "https://zfrmz.in/g6dvG9SbFiXdoxQDmChB",
+      "https://zfrmz.in/EdpBhsdsizD38cELFNHA",
       "_blank"
     );
   };
