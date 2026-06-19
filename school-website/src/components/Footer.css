@@ -1,112 +1,198 @@
 .footer {
   width: 100%;
-  background: #c70039;
-  color: white;
-
-  /* Footer hamesha niche rahe */
+  background: #1e293b; /* Header ke sath matching professional dark slate color */
+  color: #f8fafc;
   margin-top: auto;
+  border-top: 1px solid #334155;
+  box-sizing: border-box;
 }
 
+/* Container padding aur grid layout configuration */
 .footer-container {
-  max-width: 1400px;
-  margin: auto;
-
-  padding: 35px 50px; /* Pehle 60px tha */
-
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem 5%; 
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.8fr 1fr 1.3fr 1.1fr;
+  gap: 2rem; 
+}
 
-  gap: 30px;
+/* Strict Left Alignment for all sections */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensure everything starts from exact left edge */
+  text-align: left; /* Text alignment left aligned */
 }
 
 .footer-section h2 {
-  font-size: 24px;
-  margin-bottom: 12px;
+  font-size: 1.25rem; 
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 0.75rem; 
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .footer-section h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
+  font-size: 1rem; 
+  font-weight: 600;
+  color: #38bdf8; 
+  margin-bottom: 0.75rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
 }
 
-.footer-section p {
-  word-wrap: break-word;
-  line-height: 1.8;
+/* Brand Section Text */
+.brand-column p {
+  color: #94a3b8;
+  line-height: 1.5; 
+  font-size: 0.9rem;
+  max-width: 320px;
+  margin: 0;
 }
 
-.footer-section p,
-.footer-section li {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.footer-section ul {
+/* Links Layout - Exact Left Edge Aligned */
+.links-column ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
-.footer-section ul li {
-  margin-bottom: 8px;
+.links-column ul li {
+  margin-bottom: 0.5rem; 
   cursor: pointer;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  display: block; /* Full line block element */
+  width: 100%;
+  padding: 0; /* No padding shift */
 }
 
-.footer-section ul li:hover {
-  color: #ffd700;
+.links-column ul li:hover {
+  color: #38bdf8;
+  /* Animate slide ko hataya hai taaki text ek barabar left line me hi locked rahe */
 }
 
-/* Social Icons */
+/* Contact Details Alignment */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; 
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.contact-item a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #38bdf8;
+}
+
+.contact-icon {
+  color: #38bdf8;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Social Column Area adjustments */
+.social-tagline {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  width: 100%;
+}
 
 .social-icons {
   display: flex;
   gap: 10px;
-  margin-top: 15px;
-  margin-left: 2 0px;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start; /* Social icons starting from exact left edge */
 }
 
 .social-icons a {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  color: white;
-  font-size: 25px;
-  transition: 0.3s;
+  background: #2b394f;
+  border-radius: 6px; 
+  color: #f1f5f9;
+  font-size: 1.05rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons a:hover {
-  background: white;
-  color: #c70039;
+  background: #0ea5e9;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
 }
 
+/* Copyright Row */
 .footer-bottom {
   text-align: center;
-  padding: 12px;
-
-  background: #a50030;
-
-  font-size: 13px;
+  padding: 0.8rem 20px; 
+  background: #0f172a; 
+  border-top: 1px solid #1e293b;
 }
 
-/* Tablet */
+.footer-bottom p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+}
 
-@media (max-width: 992px) {
+/* ==============================================
+   RESPONSIVE LAYOUTS
+   ============================================== */
+
+@media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 5%;
   }
 }
 
-/* Mobile */
-
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
-    padding: 30px 20px;
+    gap: 1.75rem;
+    padding: 2rem 1.5rem;
   }
-
+  
+  .footer-section {
+    align-items: flex-start; /* Tablet aur mobile par bhi strictly left grid alignment */
+    text-align: left;
+  }
+  
+  .brand-column p {
+    max-width: 100%;
+  }
+  
   .social-icons {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }

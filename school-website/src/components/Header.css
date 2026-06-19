@@ -1,5 +1,4 @@
 /* RESET */
-
 * {
   margin: 0;
   padding: 0;
@@ -12,306 +11,281 @@ body,
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-
-#root {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* TOP HEADER */
 
 .top-header {
   width: 100%;
-  background: linear-gradient(to bottom, #d90c43, #c1063a);
+  background: #1e293b;
   color: white;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 18px 60px;
-
-  border-bottom: 3px solid #b00434;
+  padding: 16px 5%; /* Padding slightly increased for better breathing room */
+  z-index: 1001;
+  position: relative;
 }
-
-/* LOGO */
 
 .logo {
   display: flex;
   align-items: center;
   gap: 15px;
+  cursor: pointer;
 }
 
 .logo img {
-  width: 55px;
+  width: 55px;  /* Logo size slightly increased */
   height: 55px;
   background: white;
   border-radius: 50%;
-  padding: 5px;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo h2 {
-  font-size: 30px;
+  font-size: 26px; /* Increased from 22px */
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  color: #f8fafc;
 }
 
 /* BUTTONS */
-
 .top-buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
-.top-buttons button {
-  background: rgba(255, 255, 255, 0.15);
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
+/* Professional Sharp Layout Contact Button */
+.contact-btn {
+  background-color: #0ea5e9; 
   color: white;
-
-  padding: 10px 16px;
-
+  border: none;
+  padding: 11px 26px; /* Increased padding for a bolder button appearance */
   cursor: pointer;
-
-  border-radius: 4px;
-
-  transition: 0.3s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15.5px; /* Increased from 14px */
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
 }
 
-.top-buttons button:hover {
-  background: white;
-  color: #d90c43;
+.contact-btn:hover {
+  background-color: #0284c7;
+  transform: translateY(-1px);
 }
 
-.top-buttons a {
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
+/* HAMBURGER MENU BUTTON (Hidden on Desktop) */
+.menu-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px; /* Slightly scaled up for accessibility */
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
 }
 
-.login-btn {
-  min-width: 90px;
+.menu-toggle-btn .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
-/* NAVBAR */
-
+/* NAVBAR DESKTOP */
 .navbar {
   width: 100%;
-  background: #f4f4f4;
-
-  border-bottom: 1px solid #ddd;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar ul {
   list-style: none;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  gap: 35px;
-
-  padding: 14px 20px;
+  gap: 35px; /* Gap slightly increased */
+  padding: 16px 20px; /* Vertical padding enhanced */
 }
 
 .navbar li {
-  color: #555;
-  font-size: 14px;
+  color: #475569;
+  font-size: 15.5px; /* Increased from 13.5px for clear visibility */
   font-weight: 600;
   cursor: pointer;
-
   position: relative;
-
-  transition: 0.3s;
-}
-
-.navbar li:first-child {
-  color: #d90c43;
-}
-
-.navbar li::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: -14px;
-
-  width: 0;
-  height: 3px;
-
-  background: #d90c43;
-
-  transition: 0.3s;
+  transition: color 0.2s ease;
+  padding: 4px 0;
 }
 
 .navbar li:hover {
-  color: #d90c43;
+  color: #0ea5e9;
 }
 
-.navbar li:hover::after {
+/* Active Line Under navbar item on hover */
+.navbar > ul > li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -16px; /* Matched with updated padding */
+  width: 0;
+  height: 3px;
+  background: #0ea5e9;
+  transition: width 0.2s ease;
+}
+
+.navbar > ul > li:hover::after {
   width: 100%;
 }
 
-/* TABLET */
-
-@media (max-width: 992px) {
-  .top-header {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .top-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .logo {
-    flex-direction: column;
-  }
-
-  .logo h2 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .top-buttons {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .top-buttons button {
-    width: 100%;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar li::after {
-    display: none;
-  }
-}
-/* CAREERS DROPDOWN */
-
-.career-dropdown-menu {
+/* DROPDOWNS (Desktop Layouts) */
+.career-dropdown-menu, .course-dropdown-menu {
   position: relative;
 }
 
-.career-dropdown {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 220px;
-
-  background: white;
-  border-radius: 8px;
-
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
-
-  list-style: none;
-  padding: 6px;
-  margin: 0;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: 0.2s ease;
-
-  z-index: 1000;
-}
-
-.career-dropdown-menu:hover .career-dropdown {
-  opacity: 1;
-  visibility: visible;
-}
-
-.career-dropdown li {
-  padding: 10px 12px;
-  border-radius: 6px;
-
-  font-size: 14px;
-  color: #444;
-
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.career-dropdown li:hover {
-  background: #f5f5f5;
-  color: #d90c43;
-}
-
-
-/* Dropdown container */
-.course-dropdown-menu {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* Dropdown menu (Default: Hidden) */
-ul.course {
-  display: none !important; /* !important lagane se layout rules override nahi honge */
+.career-dropdown, ul.course {
   position: absolute;
   top: 100%;
-  left: 0;
-  background: #ffffff !important;
-  min-width: 180px;
-  margin: 0;
-  padding: 0;
-  list-style: none !important; /* Koi bhi bullet points ya numeric marks hatane ke liye */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 220px; /* Width widened slightly to hold larger text */
+  background: white;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  z-index: 999;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  list-style: none !important;
+  padding: 8px;
+  margin-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1005;
+  border: 1px solid #f1f5f9;
 }
 
-/* IMPORTANT: Hover karne par hi display block hoga */
-.course-dropdown-menu:hover ul.course {
+ul.course {
   display: block !important;
 }
 
-/* Dropdown ke andar ke items (Science, Commerce, Arts) */
-ul.course li {
-  display: block !important; /* Isse items ek line me aane ki jagah ek ke neeche ek aayenge */
+.career-dropdown-menu:hover .career-dropdown,
+.course-dropdown-menu:hover ul.course {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.career-dropdown li, ul.course li {
+  display: block !important;
   width: 100%;
-  padding: 12px 15px;
-  border-bottom: 1px solid #eee;
-  background: #ffffff !important;
-  color: #333 !important; /* Text color ko normal rakhne ke liye */
-  font-size: 14px;
-  text-align: left; /* Text left side me aligned rahega */
-  box-sizing: border-box;
-}
-
-/* Last item ki bottom border hatane ke liye */
-ul.course li:last-child {
+  padding: 11px 16px;
+  border-radius: 6px;
+  font-size: 15px; /* Dropdown text font scaled up */
+  color: #334155 !important;
+  text-align: left;
   border-bottom: none;
+  transition: all 0.2s ease;
 }
 
-/* Hover effect individual items ke liye */
-ul.course li:hover {
-  background: #f1f1f1 !important;
-  color: #d1345b !important; /* Hover par aapke header ka maroon/red color text par dikhega */
+.career-dropdown li:hover, ul.course li:hover {
+  background: #f1f5f9 !important;
+  color: #0ea5e9 !important;
+  padding-left: 20px;
+}
+
+/* ==============================================
+   RESPONSIVE MOBILE & TABLET LAYOUT
+   ============================================== */
+
+@media (max-width: 900px) {
+  .logo h2 {
+    font-size: 21px; /* Scaled mobile view heading proportionately */
+  }
+
+  /* Show Hamburger Icon */
+  .menu-toggle-btn {
+    display: flex;
+  }
+
+  /* Hamburger to X cross animation state */
+  .menu-toggle-btn.active .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+  }
+  .menu-toggle-btn.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle-btn.active .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+  }
+
+  /* Dropdown panel mobile conversion */
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: none;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+  }
+
+  /* Opened mobile state triggered by toggle */
+  .navbar.mobile-open {
+    max-height: 80vh; 
+    overflow-y: auto;
+    visibility: visible;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .navbar li {
+    width: 100%;
+    padding: 16px 24px; 
+    font-size: 16px; 
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .navbar > ul > li::after {
+    display: none; 
+  }
+
+  /* Nested dropdown fixes for ease on mobile viewport tapping */
+  .career-dropdown, ul.course {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    display: block !important;
+    padding: 0 0 0 15px;
+    margin-top: 5px;
+    border: none;
+    background: #f8fafc ;
+  }
+
+  .career-dropdown li, ul.course li {
+    background: transparent ;
+    padding: 11px 12px;
+    border-bottom: none;
+    font-size: 15px;
+  }
 }
