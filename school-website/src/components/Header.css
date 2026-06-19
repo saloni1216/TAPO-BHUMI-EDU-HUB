@@ -1,4 +1,4 @@
-/* RESET */
+/* RESET & BASE SETUP */
 * {
   margin: 0;
   padding: 0;
@@ -21,8 +21,8 @@ body,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 5%; /* Padding slightly increased for better breathing room */
-  z-index: 1001;
+  padding: 16px 5%;
+  z-index: 2001;
   position: relative;
 }
 
@@ -34,7 +34,7 @@ body,
 }
 
 .logo img {
-  width: 55px;  /* Logo size slightly increased */
+  width: 55px;  
   height: 55px;
   background: white;
   border-radius: 50%;
@@ -43,7 +43,7 @@ body,
 }
 
 .logo h2 {
-  font-size: 26px; /* Increased from 22px */
+  font-size: 26px; 
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -57,16 +57,15 @@ body,
   gap: 20px;
 }
 
-/* Professional Sharp Layout Contact Button */
 .contact-btn {
   background-color: #0ea5e9; 
   color: white;
   border: none;
-  padding: 11px 26px; /* Increased padding for a bolder button appearance */
+  padding: 11px 26px; 
   cursor: pointer;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 15.5px; /* Increased from 14px */
+  font-size: 15.5px; 
   letter-spacing: 0.3px;
   transition: all 0.2s ease;
   box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.2);
@@ -77,18 +76,18 @@ body,
   transform: translateY(-1px);
 }
 
-/* HAMBURGER MENU BUTTON (Hidden on Desktop) */
+/* HAMBURGER MENU BUTTON */
 .menu-toggle-btn {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px; /* Slightly scaled up for accessibility */
+  width: 28px; 
   height: 20px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 1002;
+  z-index: 2002;
 }
 
 .menu-toggle-btn .bar {
@@ -114,13 +113,13 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 35px; /* Gap slightly increased */
-  padding: 16px 20px; /* Vertical padding enhanced */
+  gap: 35px; 
+  padding: 16px 20px; 
 }
 
 .navbar li {
   color: #475569;
-  font-size: 15.5px; /* Increased from 13.5px for clear visibility */
+  font-size: 15.5px; 
   font-weight: 600;
   cursor: pointer;
   position: relative;
@@ -132,12 +131,11 @@ body,
   color: #0ea5e9;
 }
 
-/* Active Line Under navbar item on hover */
 .navbar > ul > li::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -16px; /* Matched with updated padding */
+  bottom: -16px; 
   width: 0;
   height: 3px;
   background: #0ea5e9;
@@ -148,7 +146,7 @@ body,
   width: 100%;
 }
 
-/* DROPDOWNS (Desktop Layouts) */
+/* DESKTOP DROPDOWNS (Hover Par Khulega) */
 .career-dropdown-menu, .course-dropdown-menu {
   position: relative;
 }
@@ -158,7 +156,7 @@ body,
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  width: 220px; /* Width widened slightly to hold larger text */
+  width: 220px; 
   background: white;
   border-radius: 8px;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
@@ -188,7 +186,7 @@ ul.course {
   width: 100%;
   padding: 11px 16px;
   border-radius: 6px;
-  font-size: 15px; /* Dropdown text font scaled up */
+  font-size: 15px; 
   color: #334155 !important;
   text-align: left;
   border-bottom: none;
@@ -202,20 +200,39 @@ ul.course {
 }
 
 /* ==============================================
-   RESPONSIVE MOBILE & TABLET LAYOUT
+   PREMIUM MOBILE OVERLAY LAYOUT
    ============================================== */
 
 @media (max-width: 900px) {
-  .logo h2 {
-    font-size: 21px; /* Scaled mobile view heading proportionately */
+  .top-header {
+    padding: 14px 5%;
+    background: #1e293b !important;
   }
 
-  /* Show Hamburger Icon */
+  .logo h2 {
+    font-size: 19px; 
+  }
+
+  .logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .top-buttons {
+    gap: 15px;
+  }
+
+  .contact-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+    background-color: #0ea5e9 !important;
+  }
+
   .menu-toggle-btn {
     display: flex;
   }
 
-  /* Hamburger to X cross animation state */
   .menu-toggle-btn.active .bar:nth-child(1) {
     transform: translateY(8.5px) rotate(45deg);
   }
@@ -226,66 +243,107 @@ ul.course {
     transform: translateY(-8.5px) rotate(-45deg);
   }
 
-  /* Dropdown panel mobile conversion */
+  /* Mobile Dropdown Drawer Full Overlay */
   .navbar {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 72px;
     left: 0;
     width: 100%;
-    background: #ffffff;
+    height: calc(100vh - 72px);
+    background: #1e293b !important; /* Premium dark background */
     max-height: 0;
-    overflow: hidden;
+    overflow-y: auto;
     visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-bottom: none;
-    box-shadow: 0 15px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    z-index: 2000 !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   }
 
-  /* Opened mobile state triggered by toggle */
   .navbar.mobile-open {
-    max-height: 80vh; 
-    overflow-y: auto;
+    max-height: calc(100vh - 72px);
     visibility: visible;
-    border-bottom: 2px solid #e2e8f0;
+    opacity: 1;
   }
 
   .navbar ul {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
-    padding: 10px 0;
+    padding: 20px 6%;
   }
 
   .navbar li {
     width: 100%;
-    padding: 16px 24px; 
+    padding: 16px 20px; 
     font-size: 16px; 
-    border-bottom: 1px solid #f1f5f9;
+    color: #f8fafc !important;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(241, 245, 249, 0.08);
+    letter-spacing: 0.5px;
+    text-align: left !important;
   }
 
-  .navbar > ul > li::after {
-    display: none; 
+  /* MOBILE SUB-MENUS DEFAULT HIDDEN MECHANICS */
+  .navbar ul li.course-dropdown-menu .sub-menu-hide,
+  .navbar ul li.career-dropdown-menu .sub-menu-hide {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transition: all 0.3s ease-in-out;
+    display: none !important; /* Strictly hidden by default */
   }
 
-  /* Nested dropdown fixes for ease on mobile viewport tapping */
-  .career-dropdown, ul.course {
-    position: static;
-    transform: none;
-    width: 100%;
-    box-shadow: none;
-    opacity: 1;
-    visibility: visible;
-    display: block !important;
-    padding: 0 0 0 15px;
-    margin-top: 5px;
-    border: none;
-    background: #f8fafc ;
+  /* Mobile Sub-menus jab click par open honge */
+  .navbar ul li.course-dropdown-menu .sub-menu-open,
+  .navbar ul li.career-dropdown-menu .sub-menu-open {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important; /* Active block show */
+    padding: 10px 0 10px 20px !important;
+    margin-top: 10px !important;
+    border: none !important;
+    background: rgba(15, 23, 42, 0.5) !important; /* Clean inner dark card shape */
+    border-radius: 6px;
+    max-height: 300px !important;
+    transition: all 0.3s ease-in-out;
   }
 
   .career-dropdown li, ul.course li {
-    background: transparent ;
-    padding: 11px 12px;
-    border-bottom: none;
+    color: #cbd5e1 !important;
     font-size: 15px;
+    padding: 12px 15px !important;
+    border-bottom: none !important;
+  }
+
+  .career-dropdown li:hover, ul.course li:hover {
+    color: #0ea5e9 !important;
+    background: transparent !important;
+    padding-left: 15px !important;
+  }
+}
+
+/* Micro sizing optimization */
+@media (max-width: 480px) {
+  .logo h2 {
+    font-size: 15px;
+  }
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+  .top-buttons {
+    gap: 8px;
+  }
+  .contact-btn {
+    padding: 6px 12px;
+    font-size: 13px;
   }
 }
