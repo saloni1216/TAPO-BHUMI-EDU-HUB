@@ -1,10 +1,5 @@
 import "./Footer.css";
-import {
-  FaTwitter,
-  FaInstagram,
-  FaYoutube,
-
-} from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -43,25 +38,54 @@ function Footer() {
             Hamirpur, Uttar Pradesh - 210502
           </p>
           <p>📞 +91 8957252525</p>
-          <p>✉️ tapobhumieduhub@gmail.com</p>
+          <p>
+            ✉️
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=tapobhumieduhub@gmail.com"
+              target="_blank"
+
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              tapobhumieduhub@gmail.com
+            </a>
+          </p>
         </div>
 
         <div className="footer-section">
           <h3>Follow Us</h3>
 
           <div className="social-icons">
-            <a href="https://x.com/TAPOBHUMEDUHUB" target="_blank" rel="noreferrer">
+            <a
+              href="https://x.com/TAPOBHUMEDUHUB"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaTwitter />
             </a>
 
-            <a href="https://www.instagram.com/tapobhumieduhub?igsh=eWRjNzBteThycnB5" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/tapobhumieduhub?igsh=eWRjNzBteThycnB5"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaInstagram />
             </a>
 
-            <a href="https://www.youtube.com/@TAPOBHUMIEDUHUB" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.youtube.com/@TAPOBHUMIEDUHUB"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaYoutube />
             </a>
 
+            <a
+              href="https://www.facebook.com/profile.php?id=61591021527061"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaFacebook />
+            </a>
           </div>
         </div>
       </div>

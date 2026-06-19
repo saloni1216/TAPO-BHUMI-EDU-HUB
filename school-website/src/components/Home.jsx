@@ -4,13 +4,6 @@ import Homelogo from "../assets/Home-logo.jpeg";
 
 function Home() {
 
-    const handleLearnMore = () => {
-    window.open(
-      "https://share.google/nNIxwMwLDkuKEFG3b",
-      "_blank"
-    );
-  };
-
 
   const handleAdmission = () => {
     window.open(
@@ -44,9 +37,7 @@ function Home() {
           <button className="primary-btn" onClick={handleAdmission}>
             Admission Open
           </button>
-          <button className="secondary-btn" onClick={handleLearnMore}>
-            Learn More
-          </button>
+         
         </div>
 
         <div className="hero-stats">

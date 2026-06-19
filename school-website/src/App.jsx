@@ -9,6 +9,7 @@ import Gallery from "./components/Gallery";
 import Achievements from "./components/Achievements";
 import Courses from "./components/CoursesOffered";
 import Careers from "./components/Careers";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/careers" element={<Careers />} />
+         <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
