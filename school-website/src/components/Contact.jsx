@@ -8,9 +8,8 @@ function Contact() {
         <div className="iframe-wrapper">
           <iframe
             title="Contact Form"
-            src="https://forms.zohopublic.in/salonisingh21cs51gm1/form/ContactUsForm/formperma/wfxBTw7xE9_-2AyAwfoVuNnSKT0bwu-4cHYrRhSXGc0"
-            frameBorder="0"
-          ></iframe>
+            src='https://forms.zohopublic.in/tapobhumieduhub1/form/Contactforsupport/formperma/_96ZpaBMzGbKs5New1_mBkX56UubRfLvqwWrDCZSWms?zf_enablecamera=true' allow="camera;" frameBorder="0">
+          </iframe>
         </div>
       </div>
     </div>

@@ -46,9 +46,7 @@ function Careers() {
   aria-label="Teacher Recruitment"
   frameBorder="0"
   style={{ height: "500px", width: "99%", border: "none" }}
-  src="https://forms.zohopublic.in/salonisingh21cs51gm1/form/TeacherRecrument/formperma/P87wfNcs_GQeH4kq623r3Qr9wDjRswqVMNIpSI3HDYI"
-  title="Teacher Recruitment Form"
->
+  src='https://forms.zohopublic.in/tapobhumieduhub1/form/TeacherRecruitment/formperma/bgJzLtKHHHDtz-2pjcuGaXxipy9NUm9v0pPgqQh-BF0' >
 </iframe>
     </div>
   );
